@@ -2,6 +2,8 @@
 
 Customer churn prediction is a vital component of customer relationship management and business strategy. It involves using data analysis and predictive modeling techniques to identify customers who are likely to discontinue their business relationship with a company. By analyzing historical data, customer behavior, and various attributes, businesses can anticipate and address the factors contributing to churn. This proactive approach allows companies to implement retention strategies, improve customer satisfaction, and ultimately reduce customer attrition, leading to increased revenue and business sustainability. Customer churn prediction helps organizations make data-driven decisions, enhance customer engagement, and create targeted interventions to retain their valuable customer base.
 
+<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/churn.png" width="600" height="200">
+
 ```{r warning = FALSE, message = FALSE, include=TRUE}
 # Suppress dplyr summarise grouping warning messages
 options(dplyr.summarise.inform = FALSE)
@@ -104,6 +106,7 @@ plot_charge <- ggplot(data = telecom_df, aes(x = canceled_service, y =  monthly_
 
 ggarrange(plot_comp,plot_charge, nrow=1 )
 ```
+  <img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/1.png" width="600" height="400">
 
 # Question 2
 
@@ -124,7 +127,6 @@ plot_int <- ggplot(telecom_df, aes(y = canceled_service,
 ggarrange(plot_call, plot_int, nrow = 2, ncol = 1)
 
 ```
-
 
 
 ```{r fzg}
@@ -161,7 +163,7 @@ intl_plot <- ggplot(intl, aes(x = canceled_service, y= perct)) +
 ggarrange(local_plot,intl_plot, nrow= 1 )
 
 ```
-
+<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/2.png" width="600" height="400">
 
 # Question 3
 
@@ -199,9 +201,8 @@ ggplot(contract_perc, aes(x = contract, y= perct,
   geom_text(aes(label=perct), vjust=1.6, color="black",
             position = position_dodge(0.9), size=3.5) +
   ylab("Percentage of customers")
-  
-
 ```
+<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/3.png" width="600" height="400">
 
 # Question 4
 
@@ -230,6 +231,8 @@ internet_box <- ggplot(telecom_df, aes(x= internet_service,
 ggarrange(cell_box, internet_box, nrow=1)
 
 ```
+<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/5.png" width="600" height="400">
+
 # Question 5
 
 
@@ -258,6 +261,7 @@ ggplot(charges_per, aes(x = canceled_service, y= per, fill = canceled_service)) 
   geom_text(aes(label = round(per,digits =2)), vjust=-0.3, color="black", size=3.5) +
    facet_wrap(~ payment_method, nrow = 2)
 ```
+<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/4.png" width="600" height="400">
 
 # Machine Learning
 
@@ -338,7 +342,7 @@ conf_mat(logistic_results,
 
 
 ```
-
+<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/1.1.png" width="600" height="400">
 
 # Model 2
 ## Linear Discriminant Analysis
@@ -390,8 +394,9 @@ f_meas(lda_results,
        truth = canceled_service, 
          estimate = .pred_class)
 
-
 ```
+<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/1.2.png" width="600" height="400">
+
 
 # Model 3
 ## KNN Classification
@@ -463,6 +468,9 @@ conf_mat(knn_results,
 ## Model performance grade = B
 
 ```
+<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/1.3.png" width="600" height="400">
+
+
 # Model 4
 ## Random Forest
 
@@ -540,6 +548,7 @@ rf_predictions <- rf_last_fit %>%
 conf_mat(rf_predictions, truth = canceled_service,
          estimate = .pred_class)
 ```
+<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/1.4.png" width="600" height="400">
 
 # Summary of Results
 
