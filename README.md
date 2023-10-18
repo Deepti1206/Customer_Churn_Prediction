@@ -1,8 +1,25 @@
 # Customer Churn Prediction from Telecom Industry
 
+<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/churn.png" width="600" height="200">
+
+## Table of Contents
+- [Project Objective](#project-objective)
+- [Business Understanding](#business-understanding)
+- [Dataset Overview](#dataset-overview)
+- [Data Analysis](#data-analysis)
+- [Feature Engineering](#feature-engineering)
+- [Training Model](#training-model)
+- [Prediction and Model Comparison](#prediction-and-model-comparison)
+- [Conclusion](#conclusion)
+
+## Project Objective
+The objective of the project is to predict the customers who are discontinuing the services. This projects aims to predict these churn customers based on different factors given in the data.
+
+## Business Understanding
 Customer churn prediction is a vital component of customer relationship management and business strategy. It involves using data analysis and predictive modeling techniques to identify customers who are likely to discontinue their business relationship with a company. By analyzing historical data, customer behavior, and various attributes, businesses can anticipate and address the factors contributing to churn. This proactive approach allows companies to implement retention strategies, improve customer satisfaction, and ultimately reduce customer attrition, leading to increased revenue and business sustainability. Customer churn prediction helps organizations make data-driven decisions, enhance customer engagement, and create targeted interventions to retain their valuable customer base.
 
-<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/churn.png" width="600" height="200">
+## Dataset Overview
+
 
 ```{r warning = FALSE, message = FALSE, include=TRUE}
 # Suppress dplyr summarise grouping warning messages
