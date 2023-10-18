@@ -7,10 +7,11 @@
 - [Business Understanding](#business-understanding)
 - [Dataset Overview](#dataset-overview)
 - [Data Analysis](#data-analysis)
-- [Feature Engineering](#feature-engineering)
-- [Training Model](#training-model)
-- [Prediction and Model Comparison](#prediction-and-model-comparison)
-- [Conclusion](#conclusion)
+- [Machine Learning](#machine-learning)
+- [Summary of Results](#summary-of-results)
+- [Highlights and key findings](#highlights-and-key-findings)
+- [Classification model and analysis](#classification-model-and-analysis)
+- [Recommendations to the company](#recommendations-to-the-company)
 
 ## Project Objective
 The objective of the project is to predict the customers who are discontinuing the services. This projects aims to predict these churn customers based on different factors given in the data.
@@ -19,7 +20,7 @@ The objective of the project is to predict the customers who are discontinuing t
 Customer churn prediction is a vital component of customer relationship management and business strategy. It involves using data analysis and predictive modeling techniques to identify customers who are likely to discontinue their business relationship with a company. By analyzing historical data, customer behavior, and various attributes, businesses can anticipate and address the factors contributing to churn. This proactive approach allows companies to implement retention strategies, improve customer satisfaction, and ultimately reduce customer attrition, leading to increased revenue and business sustainability. Customer churn prediction helps organizations make data-driven decisions, enhance customer engagement, and create targeted interventions to retain their valuable customer base.
 
 ## Dataset Overview
-
+This dataset contains different factors related to churn rate. The Churn column is given as 'Yes' or 'No' meaning it is a categorical column.
 
 ```{r warning = FALSE, message = FALSE, include=TRUE}
 # Suppress dplyr summarise grouping warning messages
@@ -65,7 +66,6 @@ telecom_df %>% dplyr::group_by(canceled_service) %>% summarise(count = n())
 
 
 # Data Analysis
-
 
 
 ```{r , include = FALSE}
@@ -284,7 +284,7 @@ ggplot(charges_per, aes(x = canceled_service, y= per, fill = canceled_service)) 
 
 # Model 1
 
-##Logistic Regression
+## Logistic Regression
 
 ```{r vv}
 ## Data Splitting
@@ -590,7 +590,7 @@ The highlights and the key findings of the analysis are as follows:
 - It is observed the moderate relation between the service status, paymnet method and the monthly charges. The cancellation rate of the customer who prefers to pay by **electronic check** is around 50%.
 
 
-##Classification model and analysis
+## Classification model and analysis
 
 There were four types of classification models used for the analysis of the data. Each model is tested by their performance metric **ROC_AUC**. ROC_AUC is used to evaluate the model performance.
 
