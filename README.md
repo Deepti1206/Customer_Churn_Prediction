@@ -1,6 +1,6 @@
 # Customer Churn Prediction in Telecom Industry
 
-<img src="https://public.tableau.com/app/profile/deepti.vijay.khandagale/viz/ComplaintAnalysisofCallCenterOCT22/Dashboard1" width="600" height="200">
+<img src="<img src="https://github.com/Deepti1206/Predicting_Customer_Cancellation_Telecom_Services/blob/main/Images/churn.png" width="600" height="200">" width="600" height="200">
 
 ## Table of Contents
 - [Project Objective](#project-objective)
